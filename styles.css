@@ -1,0 +1,11 @@
+#areaResultados{
+    background-color: aqua;
+}
+#areaBotones{
+    max-width: 50%;
+    max-height: 50%;
+    background-color: rgb(46, 196, 241);
+}
+#filaBotones{
+    gap:5rem;
+}
