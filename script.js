@@ -32,6 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
         numero = 0;
     });
 
+    document.getElementById('btnDecimal').addEventListener('click', () => {
+        console.log("Click decimal");
+        console.log("Antes:", barraResultado.value);
+        let arrayRecorrer = barraResultado.value.split('');
+        for(const elemento of arrayRecorrer){
+            if(elemento === '.'){
+                return;
+            }
+        }
+        barraResultado.value += '.';
+    });
+
     document.getElementById("btnResolver").addEventListener('click', () => {
         let resultado;
         if(terminosOperacion.length == 0){
