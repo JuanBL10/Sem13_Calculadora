@@ -59,7 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     resultado = terminosOperacion[0] - terminosOperacion[1];
                     break;
                 case '/':
-                    resultado = terminosOperacion[0] / terminosOperacion[1];
+                    if(terminosOperacion[1] == 0){
+                        alert('No es posible la division entre 0');
+                        document.getElementById('btnLimpiar').click();
+                        return;
+                    }
+                    else{
+                        resultado = terminosOperacion[0] / terminosOperacion[1];
+
+                    }
                     break;
                 case '*':
                     resultado = terminosOperacion[0] * terminosOperacion[1];
